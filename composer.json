@@ -1,0 +1,29 @@
+{
+  "name": "kometsoft/laravel-admin",
+  "description": "Admin UI templates.",
+  "authors": [
+    {
+      "name": "aerrata",
+      "email": "0x0976@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Kometsoft\\Admin\\": "src/"
+    },
+    "classmap": [
+      "/"
+    ]
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Kometsoft\\Admin\\AdminServiceProvider"
+      ]
+    }
+  },
+  "require": {
+    "php": ">=8.0",
+    "kometsoft/laravel-tabler": "dev-main"
+  }
+}
