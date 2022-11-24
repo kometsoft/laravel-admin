@@ -1,10 +1,10 @@
 <?php
 
-namespace Kometsoft\Tabler;
+namespace Kometsoft\Admin;
 
 use Illuminate\Support\ServiceProvider;
 
-class TablerServiceProvider extends ServiceProvider
+class AdminServiceProvider extends ServiceProvider
 {
     /**
      * Register any application services.
