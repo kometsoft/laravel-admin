@@ -24,6 +24,7 @@
   },
   "require": {
     "php": ">=8.0",
-    "kometsoft/laravel-auth": "dev-main"
+    "kometsoft/laravel-auth": "dev-main",
+    "kometsoft/laravel-helpers": "dev-main"
   }
 }
