@@ -3,6 +3,7 @@
 namespace Kometsoft\Admin;
 
 use Illuminate\Support\ServiceProvider;
+use App\Console\Commands\InstallCommand;
 
 class AdminServiceProvider extends ServiceProvider
 {
@@ -37,5 +38,11 @@ class AdminServiceProvider extends ServiceProvider
             __DIR__ . '/../stubs/routes' => base_path('routes'),
             __DIR__ . '/../stubs/stubs' => base_path('stubs'),
         ], 'laravel-admin');
+
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                InstallCommand::class,
+            ]);
+        }
     }
 }
