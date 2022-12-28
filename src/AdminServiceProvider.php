@@ -3,7 +3,7 @@
 namespace Kometsoft\Admin;
 
 use Illuminate\Support\ServiceProvider;
-use App\Console\Commands\InstallCommand;
+use App\Console\Commands\InstallAdminCommand;
 
 class AdminServiceProvider extends ServiceProvider
 {
@@ -41,7 +41,7 @@ class AdminServiceProvider extends ServiceProvider
 
         if ($this->app->runningInConsole()) {
             $this->commands([
-                InstallCommand::class,
+                InstallAdminCommand::class,
             ]);
         }
     }

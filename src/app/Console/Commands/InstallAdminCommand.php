@@ -6,7 +6,7 @@ use RuntimeException;
 use Illuminate\Console\Command;
 use Symfony\Component\Process\Process;
 
-class InstallCommand extends Command
+class InstallAdminCommand extends Command
 {
     /**
      * The name and signature of the console command.
