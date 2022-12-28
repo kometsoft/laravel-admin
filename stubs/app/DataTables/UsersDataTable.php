@@ -27,8 +27,8 @@ class UsersDataTable extends DataTable
                 return view('tabler::components.datatable-actions', [
                     'id' => 'users-table',
                     'route' => [
-                        'show' => route('tabler.admin.user.show', $model),
-                        'edit' => route('tabler.admin.user.edit', $model),
+                        'show' => route('admin.user.show', $model),
+                        'edit' => route('admin.user.edit', $model),
                     ]
                 ])->toHtml();
             })

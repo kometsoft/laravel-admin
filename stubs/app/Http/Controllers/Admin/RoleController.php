@@ -51,7 +51,7 @@ class RoleController extends Controller
             'name' => $r->name,
         ]);
 
-        return redirect()->route('tabler.admin.role.index')->with('success', 'Saved!');
+        return redirect()->route('admin.role.index')->with('success', 'Saved!');
     }
 
     /**
@@ -101,7 +101,7 @@ class RoleController extends Controller
 
         $role->syncPermissions($r->permissions);
         
-        return redirect()->route('tabler.admin.role.index')->with('success', 'Saved!');
+        return redirect()->route('admin.role.index')->with('success', 'Saved!');
     }
 
     /**

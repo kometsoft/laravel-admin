@@ -27,7 +27,7 @@ class ActivitiesDataTable extends DataTable
                 return view('tabler::components.datatable-actions', [
                     'id' => 'activities-table',
                     'route' => [
-                        'show' => route('tabler.admin.activity.show', $model),
+                        'show' => route('admin.activity.show', $model),
                     ]
                 ])->toHtml();
             })

@@ -3,7 +3,7 @@
 @section('header')
 <x-tabler::page-header title="Users">
     <div class="btn-list">
-        <x-tabler::button :href="route('tabler.admin.user.create')" class="btn btn-primary" icon="plus" label="Create"></x-tabler::button>
+        <x-tabler::button :href="route('admin.user.create')" class="btn btn-primary" icon="plus" label="Create"></x-tabler::button>
     </div>
 </x-page-header>
 @endsection

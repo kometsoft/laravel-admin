@@ -2,7 +2,7 @@
 
 @section('header')
 <x-tabler::page-header :title='"$activity->description"' :links="array_merge([
-    ['route' => route('tabler.admin.activity.index'), 'name' => __('Activity Logs')],
+    ['route' => route('admin.activity.index'), 'name' => __('Activity Logs')],
 ])"></x-tabler::page-header>
 @endsection
 
@@ -45,7 +45,7 @@
                 <div class="form-group mb-3 row">
                     <x-tabler::label class="col-md-3 col-form-label" label="By"></x-tabler::label>
                     <div class="col-md-9">
-                        <a class="form-control-plaintext" href="{{ $activity->causer ? route('tabler.admin.user.show', $activity->causer) : '#' }}">
+                        <a class="form-control-plaintext" href="{{ $activity->causer ? route('admin.user.show', $activity->causer) : '#' }}">
                             {{ $activity->causer->name }}
                         </a>
                     </div>

@@ -3,7 +3,7 @@
 @section('header')
 <x-tabler::page-header title="Access Control">
     <div class="btn-list">
-        <x-tabler::button :href="route('tabler.admin.role.create')" class="btn btn-primary" icon="plus" label="Create"></x-tabler::button>
+        <x-tabler::button :href="route('admin.role.create')" class="btn btn-primary" icon="plus" label="Create"></x-tabler::button>
     </div>
 </x-page-header>
 @endsection

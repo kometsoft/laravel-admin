@@ -2,10 +2,10 @@
 
 @section('header')
 <x-tabler::page-header :title='"$user->name"' :links="[
-    ['route' => route('tabler.admin.user.index'), 'name' => __('Users')],
+    ['route' => route('admin.user.index'), 'name' => __('Users')],
 ]">
     <div class="btn-list">
-        <x-tabler::button :href="route('tabler.admin.user.edit', $user)" class="btn btn-primary" icon="pencil" label="Edit"></x-tabler::button>
+        <x-tabler::button :href="route('admin.user.edit', $user)" class="btn btn-primary" icon="pencil" label="Edit"></x-tabler::button>
     </div>
 </x-page-header>
 @endsection
@@ -16,7 +16,7 @@
         <div class="card">
             <div class="card-body">
                 <form id="form-user-edit"
-                    action="{{ $user->exists ? route('tabler.admin.user.update', $user) : route('tabler.admin.user.store') }}"
+                    action="{{ $user->exists ? route('admin.user.update', $user) : route('admin.user.store') }}"
                     method="POST">
                     @csrf
                     <div class="form-group mb-3 row">

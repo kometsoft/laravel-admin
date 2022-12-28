@@ -2,8 +2,8 @@
 
 @section('header')
 <x-tabler::page-header :title='$user->exists ? "Edit User" : "Create User"' :links="array_merge([
-    ['route' => route('tabler.admin.user.index'), 'name' => __('Users')],
-    ($user->exists ? ['route' => route('tabler.admin.user.show', $user), 'name' => $user->name] : []),
+    ['route' => route('admin.user.index'), 'name' => __('Users')],
+    ($user->exists ? ['route' => route('admin.user.show', $user), 'name' => $user->name] : []),
 ])">
     <div class="btn-list">
         <x-tabler::button type="submit" form="form-user-edit" class="btn btn-primary" icon="check" label="Save">
@@ -19,7 +19,7 @@
         <div class="card">
             <div class="card-body">
                 <form id="form-user-edit"
-                    action="{{ $user->exists ? route('tabler.admin.user.update', $user) : route('tabler.admin.user.store') }}"
+                    action="{{ $user->exists ? route('admin.user.update', $user) : route('admin.user.store') }}"
                     method="POST">
                     @csrf
 

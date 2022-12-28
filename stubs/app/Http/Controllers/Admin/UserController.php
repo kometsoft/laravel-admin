@@ -61,7 +61,7 @@ class UserController extends Controller
         // $status = Password::sendResetLink(['email' => $user->email]);
 
         // if ($status == Password::RESET_LINK_SENT) {
-        return redirect()->route('tabler.admin.user.index')->with('success', 'Saved! Password reset link was sent to the user email.');
+        return redirect()->route('admin.user.index')->with('success', 'Saved! Password reset link was sent to the user email.');
         // }
 
         // throw ValidationException::withMessages([
@@ -118,7 +118,7 @@ class UserController extends Controller
 
         $user->syncRoles($r->roles);
 
-        return redirect()->route('tabler.admin.user.index')->with('success', 'Saved!');
+        return redirect()->route('admin.user.index')->with('success', 'Saved!');
     }
 
     /**

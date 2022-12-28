@@ -27,8 +27,8 @@ class RolesDataTable extends DataTable
                 return view('tabler::components.datatable-actions', [
                     'id' => 'roles-table',
                     'route' => [
-                        'show' => route('tabler.admin.role.show', $model),
-                        'edit' => route('tabler.admin.role.edit', $model),
+                        'show' => route('admin.role.show', $model),
+                        'edit' => route('admin.role.edit', $model),
                     ]
                 ])->toHtml();
             })

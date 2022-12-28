@@ -2,8 +2,8 @@
 
 @section('header')
 <x-tabler::page-header :title='$role->exists ? "Edit Role" : "Create Role"' :links="array_merge([
-    ['route' => route('tabler.admin.role.index'), 'name' => __('Roles')],
-    ($role->exists ? ['route' => route('tabler.admin.role.show', $role), 'name' => $role->name] : []),
+    ['route' => route('admin.role.index'), 'name' => __('Roles')],
+    ($role->exists ? ['route' => route('admin.role.show', $role), 'name' => $role->name] : []),
 ])">
     <div class="btn-list">
         <x-tabler::button type="submit" form="form-role-edit" class="btn btn-primary" icon="check" label="Save">
@@ -19,7 +19,7 @@
         <div class="card">
             <div class="card-body">
                 <form id="form-role-edit"
-                    action="{{ $role->exists ? route('tabler.admin.role.update', $role) : route('tabler.admin.role.store') }}"
+                    action="{{ $role->exists ? route('admin.role.update', $role) : route('admin.role.store') }}"
                     method="POST">
                     @csrf
 
