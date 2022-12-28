@@ -25,6 +25,9 @@
   "require": {
     "php": ">=8.0",
     "kometsoft/laravel-auth": "dev-main",
-    "kometsoft/laravel-helpers": "dev-main"
+    "kometsoft/laravel-helpers": "dev-main",
+    "spatie/laravel-activitylog": "^4.7",
+    "spatie/laravel-permission": "^5.7",
+    "yajra/laravel-datatables": "^9.0"
   }
 }
