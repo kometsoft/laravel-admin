@@ -1,6 +1,6 @@
 <?php
 
-namespace Tabler\App\Models;
+namespace App\Models;
 
 use Spatie\Activitylog\Models\Activity as Model;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
