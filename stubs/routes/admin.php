@@ -13,15 +13,11 @@ use Illuminate\Support\Facades\Route;
 //     Route::get('foo/{foo}/edit', 'edit')->name('foo.edit');
 // });
 
-Route::middleware(['web'])->group(function () {
-    Auth::routes();
-});
-
-Route::middleware(['web'])->controller(App\Http\Controllers\HomeController::class)->group(function () {
+Route::controller(App\Http\Controllers\HomeController::class)->group(function () {
     Route::get('home', 'index')->name('home');
 });
 
-Route::middleware(['web', 'auth'])->name('admin.')->prefix('admin/')->controller(App\Http\Controllers\Admin\UserController::class)->group(function () {
+Route::middleware(['auth'])->name('admin.')->prefix('admin/')->controller(App\Http\Controllers\Admin\UserController::class)->group(function () {
     Route::get('user', 'index')->name('user.index');
     Route::post('user', 'store')->name('user.store');
     Route::get('user/create', 'create')->name('user.create');
@@ -31,7 +27,7 @@ Route::middleware(['web', 'auth'])->name('admin.')->prefix('admin/')->controller
     Route::get('user/{user}/edit', 'edit')->name('user.edit');
 });
 
-Route::middleware(['web', 'auth'])->name('admin.')->prefix('admin/')->controller(App\Http\Controllers\Admin\RoleController::class)->group(function () {
+Route::middleware(['auth'])->name('admin.')->prefix('admin/')->controller(App\Http\Controllers\Admin\RoleController::class)->group(function () {
     Route::get('role', 'index')->name('role.index');
     Route::post('role', 'store')->name('role.store');
     Route::get('role/create', 'create')->name('role.create');
@@ -41,7 +37,7 @@ Route::middleware(['web', 'auth'])->name('admin.')->prefix('admin/')->controller
     Route::get('role/{role}/edit', 'edit')->name('role.edit');
 });
 
-Route::middleware(['web', 'auth'])->name('admin.')->prefix('admin/')->controller(App\Http\Controllers\Admin\ActivityController::class)->group(function () {
+Route::middleware(['auth'])->name('admin.')->prefix('admin/')->controller(App\Http\Controllers\Admin\ActivityController::class)->group(function () {
     Route::get('activity', 'index')->name('activity.index');
     Route::post('activity', 'store')->name('activity.store');
     Route::get('activity/create', 'create')->name('activity.create');
@@ -51,7 +47,7 @@ Route::middleware(['web', 'auth'])->name('admin.')->prefix('admin/')->controller
     Route::get('activity/{activity}/edit', 'edit')->name('activity.edit');
 });
 
-Route::middleware(['web', 'auth'])->name('tabler.')->controller(App\Http\Controllers\Auth\ProfileController::class)->group(function () {
+Route::middleware(['auth'])->name('tabler.')->controller(App\Http\Controllers\Auth\ProfileController::class)->group(function () {
     Route::get('profile', 'index')->name('profile.index');
     Route::post('profile', 'store')->name('profile.store');
     Route::get('profile/create', 'create')->name('profile.create');
