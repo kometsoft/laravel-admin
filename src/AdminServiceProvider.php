@@ -27,8 +27,6 @@ class AdminServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadRoutesFrom(base_path('routes/admin.php'));
-
         $this->publishes([
             // Config file
             __DIR__ . '/config/laravel-admin.php' => config_path('laravel-admin.php'),
@@ -40,6 +38,8 @@ class AdminServiceProvider extends ServiceProvider
             __DIR__ . '/../stubs/routes' => base_path('routes'),
             __DIR__ . '/../stubs/stubs' => base_path('stubs'),
         ], 'laravel-admin');
+
+        $this->loadRoutesFrom(base_path('routes/admin.php'));
 
         if ($this->app->runningInConsole()) {
             $this->commands([
