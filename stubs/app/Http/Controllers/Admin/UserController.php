@@ -19,7 +19,7 @@ class UserController extends Controller
      */
     public function index(UsersDataTable $dataTable)
     {
-        return $dataTable->render('tabler::admin.user.index', [
+        return $dataTable->render('admin.user.index', [
             'roles' => Role::all(),
         ]);
     }
@@ -31,7 +31,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('tabler::admin.user.modify', [
+        return view('admin.user.modify', [
             'user' => new User,
             'roles' => Role::all(),
         ]);
@@ -77,7 +77,7 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        return view('tabler::admin.user.show', [
+        return view('admin.user.show', [
             'user' => $user,
             'roles' => Role::all(),
         ]);
@@ -91,7 +91,7 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        return view('tabler::admin.user.modify', [
+        return view('admin.user.modify', [
             'user' => $user,
             'roles' => Role::all(),
         ]);

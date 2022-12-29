@@ -24,7 +24,7 @@ class DummyClass extends DataTable
     {
         return (new EloquentDataTable($query))
             ->addColumn('action', function ($model) {
-                return view('tabler::components.datatable-actions', [
+                return view('components.datatable-actions', [
                     'id' => 'DummyTableId',
                     'route' => [
                         'show' => route('home'),

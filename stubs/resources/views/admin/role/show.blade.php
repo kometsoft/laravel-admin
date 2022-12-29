@@ -1,11 +1,11 @@
-@extends(config('tabler.layout'))
+@extends(config('laravel-admin.layout'))
 
 @section('header')
-<x-tabler::page-header :title='"$role->name"' :links="[
+<x-tab::page-header :title='"$role->name"' :links="[
     ['route' => route('admin.role.index'), 'name' => __('Roles')],
 ]">
     <div class="btn-list">
-        <x-tabler::button :href="route('admin.role.edit', $role)" class="btn btn-primary" icon="pencil" label="Edit"></x-tabler::button>
+        <x-tab::button :href="route('admin.role.edit', $role)" class="btn btn-primary" icon="pencil" label="Edit"></x-tab::button>
     </div>
 </x-page-header>
 @endsection
@@ -22,14 +22,14 @@
                     @csrf
 
                     <div class="form-group mb-3 row">
-                        <x-tabler::label class="col-md-3 col-form-label" label="Name"></x-tabler::label>
+                        <x-tab::label class="col-md-3 col-form-label" label="Name"></x-tab::label>
                         <div class="col-md-6">
                             <p class="form-control-plaintext">{{ $role->name }}</p>
                         </div>
                     </div>
 
                     <div class="form-group mb-3 row">
-                        <x-tabler::label class="col-md-3 col-form-label" label="Roles"></x-tabler::label>
+                        <x-tab::label class="col-md-3 col-form-label" label="Roles"></x-tab::label>
                         <div class="col-md-6">
                             @foreach($permissions as $permission)
                             <div class="form-check">

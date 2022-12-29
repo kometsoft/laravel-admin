@@ -24,7 +24,7 @@ class RolesDataTable extends DataTable
     {
         return (new EloquentDataTable($query))
             ->addColumn('action', function ($model) {
-                return view('tabler::components.datatable-actions', [
+                return view('components.datatable-actions', [
                     'id' => 'roles-table',
                     'route' => [
                         'show' => route('admin.role.show', $model),
@@ -33,10 +33,10 @@ class RolesDataTable extends DataTable
                 ])->toHtml();
             })
             ->editColumn('created_at', function ($model) {
-                return $model->created_at?->format(config('tabler.datetime_format'));
+                return $model->created_at?->format(config('laravel-admin.datetime_format'));
             })
             ->editColumn('updated_at', function ($model) {
-                return $model->updated_at?->format(config('tabler.datetime_format'));
+                return $model->updated_at?->format(config('laravel-admin.datetime_format'));
             })
             ->rawColumns(['action'])
             ->setRowId('id');

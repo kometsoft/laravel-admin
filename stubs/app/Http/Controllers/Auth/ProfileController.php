@@ -12,7 +12,7 @@ class ProfileController extends Controller
 {
     public function index()
     {
-        return view('tabler::auth.profile', [
+        return view('auth.profile', [
             'user' => auth()->user(),
         ]);
     }

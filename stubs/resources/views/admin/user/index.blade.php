@@ -1,9 +1,9 @@
-@extends(config('tabler.layout'))
+@extends(config('laravel-admin.layout'))
 
 @section('header')
-<x-tabler::page-header title="Users">
+<x-tab::page-header title="Users">
     <div class="btn-list">
-        <x-tabler::button :href="route('admin.user.create')" class="btn btn-primary" icon="plus" label="Create"></x-tabler::button>
+        <x-tab::button :href="route('admin.user.create')" class="btn btn-primary" icon="plus" label="Create"></x-tab::button>
     </div>
 </x-page-header>
 @endsection

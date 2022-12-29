@@ -47,7 +47,7 @@ Route::middleware(['auth'])->name('admin.')->prefix('admin/')->controller(App\Ht
     Route::get('activity/{activity}/edit', 'edit')->name('activity.edit');
 });
 
-Route::middleware(['auth'])->name('tabler.')->controller(App\Http\Controllers\Auth\ProfileController::class)->group(function () {
+Route::middleware(['auth'])->name('admin.')->controller(App\Http\Controllers\Auth\ProfileController::class)->group(function () {
     Route::get('profile', 'index')->name('profile.index');
     Route::post('profile', 'store')->name('profile.store');
     Route::get('profile/create', 'create')->name('profile.create');

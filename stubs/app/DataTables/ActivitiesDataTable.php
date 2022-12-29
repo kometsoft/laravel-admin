@@ -24,7 +24,7 @@ class ActivitiesDataTable extends DataTable
     {
         return (new EloquentDataTable($query))
             ->addColumn('action', function ($model) {
-                return view('tabler::components.datatable-actions', [
+                return view('components.datatable-actions', [
                     'id' => 'activities-table',
                     'route' => [
                         'show' => route('admin.activity.show', $model),
@@ -32,7 +32,7 @@ class ActivitiesDataTable extends DataTable
                 ])->toHtml();
             })
             ->editColumn('created_at', function ($model) {
-                return $model->created_at?->format(config('tabler.datetime_format'));
+                return $model->created_at?->format(config('laravel-admin.datetime_format'));
             })
             ->editColumn('log_name', function($model) {
                 return <<<TEXT

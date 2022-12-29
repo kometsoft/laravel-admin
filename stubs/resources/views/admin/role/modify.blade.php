@@ -1,15 +1,15 @@
-@extends(config('tabler.layout'))
+@extends(config('laravel-admin.layout'))
 
 @section('header')
-<x-tabler::page-header :title='$role->exists ? "Edit Role" : "Create Role"' :links="array_merge([
+<x-tab::page-header :title='$role->exists ? "Edit Role" : "Create Role"' :links="array_merge([
     ['route' => route('admin.role.index'), 'name' => __('Roles')],
     ($role->exists ? ['route' => route('admin.role.show', $role), 'name' => $role->name] : []),
 ])">
     <div class="btn-list">
-        <x-tabler::button type="submit" form="form-role-edit" class="btn btn-primary" icon="check" label="Save">
-        </x-tabler::button>
+        <x-tab::button type="submit" form="form-role-edit" class="btn btn-primary" icon="check" label="Save">
+        </x-tab::button>
     </div>
-</x-tabler::page-header>
+</x-tab::page-header>
 @endsection
 
 @section('content')
@@ -24,14 +24,14 @@
                     @csrf
 
                     <div class="form-group mb-3 row">
-                        <x-tabler::label class="col-md-3 col-form-label" label="Name"></x-tabler::label>
+                        <x-tab::label class="col-md-3 col-form-label" label="Name"></x-tab::label>
                         <div class="col-md-6">
-                            <x-tabler::input name="name" :value="old('name', $role->name)" required></x-tabler::input>
+                            <x-tab::input name="name" :value="old('name', $role->name)" required></x-tab::input>
                         </div>
                     </div>
 
                     <div class="form-group mb-3 row">
-                        <x-tabler::label class="col-md-3 col-form-label" label="Roles"></x-tabler::label>
+                        <x-tab::label class="col-md-3 col-form-label" label="Roles"></x-tab::label>
                         <div class="col-md-6">
                             @foreach($permissions as $permission)
                             <div class="form-check">

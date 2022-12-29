@@ -1,7 +1,7 @@
-@extends(config('tabler.layout'))
+@extends(config('laravel-admin.layout'))
 
 @section('header')
-<x-tabler::page-header title="Activity Logs"></x-tabler::page-header>
+<x-tab::page-header title="Activity Logs"></x-tab::page-header>
 @endsection
 
 @section('content')

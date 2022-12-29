@@ -17,7 +17,7 @@ class RoleController extends Controller
      */
     public function index(RolesDataTable $dataTable)
     {
-        return $dataTable->render('tabler::admin.role.index');
+        return $dataTable->render('admin.role.index');
     }
 
     /**
@@ -29,7 +29,7 @@ class RoleController extends Controller
     {
         $role = new Role;
 
-        return view('tabler::admin.role.modify', [
+        return view('admin.role.modify', [
             'role' => $role->load('permissions'),
             'permissions' => Permission::all()
         ]);
@@ -62,7 +62,7 @@ class RoleController extends Controller
      */
     public function show(Role $role)
     {
-        return view('tabler::admin.role.show', [
+        return view('admin.role.show', [
             'role' => $role->load('permissions'),
             'permissions' => Permission::all()
         ]);
@@ -76,7 +76,7 @@ class RoleController extends Controller
      */
     public function edit(Role $role)
     {
-        return view('tabler::admin.role.modify', [
+        return view('admin.role.modify', [
             'role' => $role->load('permissions'),
             'permissions' => Permission::all()
         ]);

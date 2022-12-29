@@ -16,7 +16,7 @@ class ActivityController extends Controller
      */
     public function index(ActivitiesDataTable $dataTable)
     {
-        return $dataTable->render('tabler::admin.activity.index');
+        return $dataTable->render('admin.activity.index');
     }
 
     /**
@@ -48,7 +48,7 @@ class ActivityController extends Controller
      */
     public function show(Activity $activity)
     {
-        return view('tabler::admin.activity.show', [
+        return view('admin.activity.show', [
             'activity' => $activity,
         ]);
     }

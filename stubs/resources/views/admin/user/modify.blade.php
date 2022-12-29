@@ -1,15 +1,15 @@
-@extends(config('tabler.layout'))
+@extends(config('laravel-admin.layout'))
 
 @section('header')
-<x-tabler::page-header :title='$user->exists ? "Edit User" : "Create User"' :links="array_merge([
+<x-tab::page-header :title='$user->exists ? "Edit User" : "Create User"' :links="array_merge([
     ['route' => route('admin.user.index'), 'name' => __('Users')],
     ($user->exists ? ['route' => route('admin.user.show', $user), 'name' => $user->name] : []),
 ])">
     <div class="btn-list">
-        <x-tabler::button type="submit" form="form-user-edit" class="btn btn-primary" icon="check" label="Save">
-        </x-tabler::button>
+        <x-tab::button type="submit" form="form-user-edit" class="btn btn-primary" icon="check" label="Save">
+        </x-tab::button>
     </div>
-</x-tabler::page-header>
+</x-tab::page-header>
 @endsection
 
 @section('content')
@@ -24,22 +24,22 @@
                     @csrf
 
                     <div class="form-group mb-3 row">
-                        <x-tabler::label class="col-md-3 col-form-label" label="Name"></x-tabler::label>
+                        <x-tab::label class="col-md-3 col-form-label" label="Name"></x-tab::label>
                         <div class="col-md-6">
-                            <x-tabler::input name="name" :value="old('name', $user->name)" required></x-tabler::input>
+                            <x-tab::input name="name" :value="old('name', $user->name)" required></x-tab::input>
                         </div>
                     </div>
 
                     <div class="form-group mb-3 row">
-                        <x-tabler::label class="col-md-3 col-form-label" label="Email"></x-tabler::label>
+                        <x-tab::label class="col-md-3 col-form-label" label="Email"></x-tab::label>
                         <div class="col-md-9">
-                            <x-tabler::input type="email" name="email" :value="old('email', $user->email)" required>
-                            </x-tabler::input>
+                            <x-tab::input type="email" name="email" :value="old('email', $user->email)" required>
+                            </x-tab::input>
                         </div>
                     </div>
 
                     <div class="form-group mb-3 row">
-                        <x-tabler::label class="col-md-3 col-form-label" label="Roles"></x-tabler::label>
+                        <x-tab::label class="col-md-3 col-form-label" label="Roles"></x-tab::label>
                         <div class="col-md-9">
                             <div class="form-selectgroup">
                                 @foreach($roles as $role)

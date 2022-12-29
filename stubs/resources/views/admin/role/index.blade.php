@@ -1,9 +1,9 @@
-@extends(config('tabler.layout'))
+@extends(config('laravel-admin.layout'))
 
 @section('header')
-<x-tabler::page-header title="Access Control">
+<x-tab::page-header title="Access Control">
     <div class="btn-list">
-        <x-tabler::button :href="route('admin.role.create')" class="btn btn-primary" icon="plus" label="Create"></x-tabler::button>
+        <x-tab::button :href="route('admin.role.create')" class="btn btn-primary" icon="plus" label="Create"></x-tab::button>
     </div>
 </x-page-header>
 @endsection

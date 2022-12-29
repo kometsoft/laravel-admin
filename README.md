@@ -2,6 +2,6 @@
 
 ## Requirements 
 - php 8.0
-- kometsoft/laravel-tabler
+- kometsoft/laravel-auth
 
 
