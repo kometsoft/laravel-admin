@@ -39,8 +39,6 @@ class AdminServiceProvider extends ServiceProvider
             __DIR__ . '/../stubs/stubs' => base_path('stubs'),
         ], 'laravel-admin');
 
-        $this->loadRoutesFrom(base_path('routes/admin.php'));
-
         if ($this->app->runningInConsole()) {
             $this->commands([
                 InstallAdminCommand::class,
