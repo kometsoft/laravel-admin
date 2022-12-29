@@ -1,4 +1,4 @@
-@extends(config('laravel-admin.layout'))
+@extends(config('laravel-auth.layout'))
 
 @section('header')
 <x-tab::page-header :title='$role->exists ? "Edit Role" : "Create Role"' :links="array_merge([
