@@ -1,11 +1,11 @@
 <?php
 
-namespace Tabler\App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Admin;
 
 use App\Models\Activity;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Tabler\App\DataTables\ActivitiesDataTable;
+use App\DataTables\ActivitiesDataTable;
 
 class ActivityController extends Controller
 {

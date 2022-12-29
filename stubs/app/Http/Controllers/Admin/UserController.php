@@ -1,10 +1,10 @@
 <?php
 
-namespace Tabler\App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Admin;
 
 use App\Models\User;
 use Illuminate\Http\Request;
-use Tabler\App\DataTables\UsersDataTable;
+use App\DataTables\UsersDataTable;
 use Spatie\Permission\Models\Role;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Password;

@@ -1,11 +1,11 @@
 <?php
 
-namespace Tabler\App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Admin;
 
 use App\Models\Role;
 use App\Models\Permission;
 use Illuminate\Http\Request;
-use Tabler\App\DataTables\RolesDataTable;
+use App\DataTables\RolesDataTable;
 use App\Http\Controllers\Controller;
 
 class RoleController extends Controller
