@@ -1,4 +1,4 @@
-@extends(config('laravel-auth.layout'))
+@extends(config('laravel-auth.layout.app'))
 
 @section('header')
 <x-tab::page-header :title='$user->exists ? "Edit User" : "Create User"' :links="array_merge([
