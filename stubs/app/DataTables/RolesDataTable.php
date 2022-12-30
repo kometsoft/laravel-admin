@@ -24,7 +24,7 @@ class RolesDataTable extends DataTable
     {
         return (new EloquentDataTable($query))
             ->addColumn('action', function ($model) {
-                return view('components.datatable-actions', [
+                return view('tab::components.datatable-actions', [
                     'id' => 'roles-table',
                     'route' => [
                         'show' => route('admin.role.show', $model),

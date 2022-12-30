@@ -24,7 +24,7 @@ class ActivitiesDataTable extends DataTable
     {
         return (new EloquentDataTable($query))
             ->addColumn('action', function ($model) {
-                return view('components.datatable-actions', [
+                return view('tab::components.datatable-actions', [
                     'id' => 'activities-table',
                     'route' => [
                         'show' => route('admin.activity.show', $model),
