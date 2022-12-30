@@ -66,8 +66,8 @@ class RolesDataTable extends DataTable
             ->minifiedAjax()
             ->orderBy(3)
             ->buttons(
-                Button::make('excel'),
-                Button::make('print'),
+                Button::make('excel')->text('<i class="ti ti-table-export me-1"></i> Excel'),
+                Button::make('print')->text('<i class="ti ti-printer me-1"></i> Print'),
             );
     }
 
