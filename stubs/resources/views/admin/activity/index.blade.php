@@ -12,6 +12,7 @@
 </div>
 @endsection
 
+@vite(['resources/js/datatables/app.js'])
 @push('script')
-{{ $dataTable->scripts() }}
+{{ $dataTable->scripts(attributes: ['type' => 'module']) }}
 @endpush
