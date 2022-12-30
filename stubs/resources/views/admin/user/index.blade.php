@@ -11,7 +11,9 @@
 @section('content')
 <div class="row row-cards">
     <div class="col-md-12">
-        {{ $dataTable->table() }}
+        <div class="card">
+            {{ $dataTable->table() }}
+        </div>
     </div>
 </div>
 @endsection
